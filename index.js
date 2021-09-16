@@ -39,10 +39,12 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 const eightiesCompanies = companies.filter(
   (company) => company.start >= 1980 && company.start < 1990
 );
-console.log(eightiesCompanies);
+// console.log(eightiesCompanies);
 
 // get 21 and older
 const canDrink = ages.filter((age) => age >= 21);
 // console.log(canDrink);
 
 // Map  -> Creates a new array from the current array
+const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
+console.log(ageMap);
