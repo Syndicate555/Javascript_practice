@@ -30,10 +30,16 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //   }
 // });
 
-const retailCompanies = companies.filter(
-  (company) => company.category === "Retail"
+// const retailCompanies = companies.filter(
+//   (company) => company.category === "Retail"
+// );
+// console.log(retailCompanies);
+
+// Companies that started in the 80s
+const eightiesCompanies = companies.filter(
+  (company) => company.start >= 1980 && company.start < 1990
 );
-console.log(retailCompanies);
+console.log(eightiesCompanies);
 
 // get 21 and older
 const canDrink = ages.filter((age) => age >= 21);
