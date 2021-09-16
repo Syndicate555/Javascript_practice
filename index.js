@@ -58,4 +58,8 @@ const sortedCompanies = companies.sort((c1, c2) => {
   }
 });
 
+// same code with implicit return
+const sortedCompanies2 = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+
 console.log(sortedCompanies);
+console.log(sortedCompanies2);
