@@ -47,4 +47,15 @@ const canDrink = ages.filter((age) => age >= 21);
 
 // Map  -> Creates a new array from the current array
 const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
-console.log(ageMap);
+// console.log(ageMap);
+
+// sort
+const sortedCompanies = companies.sort((c1, c2) => {
+  if (c1.start > c2.start) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+
+console.log(sortedCompanies);
