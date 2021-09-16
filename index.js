@@ -70,3 +70,7 @@ console.log(ages);
 
 // console.log(sortedCompanies);
 // console.log(sortedCompanies2);
+
+// Reduce
+
+const ageSum = ages.reduce((total, age) => total + age, 0);
