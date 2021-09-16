@@ -44,3 +44,5 @@ console.log(eightiesCompanies);
 // get 21 and older
 const canDrink = ages.filter((age) => age >= 21);
 // console.log(canDrink);
+
+// Map  -> Creates a new array from the current array
