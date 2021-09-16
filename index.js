@@ -49,7 +49,7 @@ const canDrink = ages.filter((age) => age >= 21);
 const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
 // console.log(ageMap);
 
-// sort
+// sort -> changes the original array
 const sortedCompanies = companies.sort((c1, c2) => {
   if (c1.start > c2.start) {
     return 1;
@@ -61,5 +61,12 @@ const sortedCompanies = companies.sort((c1, c2) => {
 // same code with implicit return
 const sortedCompanies2 = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
 
-console.log(sortedCompanies);
-console.log(sortedCompanies2);
+const sortAges = ages.sort((a, b) => a - b); // ascending order
+// const sortAges2 = ages.sort((a, b) => b - a); //descending order
+
+console.log(sortAges);
+console.log(ages);
+// console.log(sortAges2);
+
+// console.log(sortedCompanies);
+// console.log(sortedCompanies2);
