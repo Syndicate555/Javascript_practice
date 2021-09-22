@@ -10,7 +10,60 @@ const companies = [
   { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
 ];
 
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+const customers = [
+  {
+    id: 5547107123394,
+    email: "sseevara235@gmail.com",
+  },
+  {
+    id: 5547107113394,
+    email: "sseevara234@gmail.com",
+  },
+  {
+    id: 554722107123394,
+    email: "sseevara233@gmail.com",
+  },
+  {
+    id: 55471071265394,
+    email: "sseevara232@gmail.com",
+  },
+  {
+    id: 55471074523394,
+    email: "sseevara231@gmail.com",
+  },
+];
+
+const dataCustomers = [
+  {
+    id: 5547107123394,
+    email: "sseevara235@gmail.com",
+  },
+  {
+    id: 5547107113394,
+    email: "sseevara234@gmail.com",
+  },
+];
+
+const newCustomers = [].concat(
+  customers.filter((obj1) =>
+    dataCustomers.every((obj2) => obj1.id !== obj2.id)
+  ),
+  dataCustomers.filter((obj2) => customers.every((obj1) => obj2.id !== obj1.id))
+);
+console.log(newCustomers);
+// const companies2 = [
+//   { name: "Company One", category: "Finance", start: 1981, end: 2003 },
+//   { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+// ];
+
+// const removeDuplicates = () => {
+//   const newCompanies = companies.filter((val) => companies2.includes(val));
+//   console.log(newCompanies);
+// };
+
+// removeDuplicates();
+
+// const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 //forEach
 
@@ -36,36 +89,36 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(retailCompanies);
 
 // Companies that started in the 80s
-const eightiesCompanies = companies.filter(
-  (company) => company.start >= 1980 && company.start < 1990
-);
-// console.log(eightiesCompanies);
+// const eightiesCompanies = companies.filter(
+//   (company) => company.start >= 1980 && company.start < 1990
+// );
+// // console.log(eightiesCompanies);
 
 // get 21 and older
-const canDrink = ages.filter((age) => age >= 21);
+// const canDrink = ages.filter((age) => age >= 21);
 // console.log(canDrink);
 
 // Map  -> Creates a new array from the current array
-const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
+// const ageMap = ages.map((age) => Math.sqrt(age)).map((age) => age * 2);
 // console.log(ageMap);
 
 // sort -> changes the original array
-const sortedCompanies = companies.sort((c1, c2) => {
-  if (c1.start > c2.start) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
+// const sortedCompanies = companies.sort((c1, c2) => {
+//   if (c1.start > c2.start) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
 
 // same code with implicit return
-const sortedCompanies2 = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+// const sortedCompanies2 = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
 
-const sortAges = ages.sort((a, b) => a - b); // ascending order
+// const sortAges = ages.sort((a, b) => a - b); // ascending order
 // const sortAges2 = ages.sort((a, b) => b - a); //descending order
 
-console.log(sortAges);
-console.log(ages);
+// console.log(sortAges);
+// console.log(ages);
 // console.log(sortAges2);
 
 // console.log(sortedCompanies);
@@ -73,4 +126,4 @@ console.log(ages);
 
 // Reduce
 
-const ageSum = ages.reduce((total, age) => total + age, 0);
+// const ageSum = ages.reduce((total, age) => total + age, 0);
